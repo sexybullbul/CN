@@ -1,0 +1,41 @@
+Prac3
+
+We create a network of 1 server and 2 PCs through Switch:
+
+1. To create Server: Click on End Devices - then select Server and drop it on canvas
+
+2. For the switch: Now select Network Devices -> Switches ->2960 and drop it on canvas
+
+3. For the 2 PCs:  Select End Devices -> PC. Drag and drop 2 PCs
+
+4. Now connect the components using Copper Straight Through Wire: 
+- Select Connection->Copper Straight Through wire. Now click on any of the PCs. Select FastEthernet0. Now drag to the Switch and click on it. From the popup options select any of the FastEthernet options. 
+- Now click on the other PC and repeat the process of connecting to the switch. 
+- Now connect the Server to the switch in the same manner.
+
+5. Now configure the server with the IP address: Click on the server on the canvas, select Desktop(tab) -> IP configuration. IPv4 address - 10.0.0.2
+Subnet Mask - 255.255.0.0
+Default Gateway - 10.0.0.1
+DNS Server - 10.0.0.2
+Close window section by clicking on X next to blue bar
+
+6. Now enable and set the DHCP service on the server:
+Click on the server in the canvas, select Services(tab)->DHCP. On the right side, click on Service ON. 
+Default gateway - 10.0.0.1 
+DNS Server - 10.0.0.2
+Start IP address - 10.0.0.3
+Subnet Mask - 255.255.0.0
+Then Save. You will see the change reflected below.
+
+7.Verify the dynamic addressing we do the following:
+Click on first PC.
+Select Desktop->IP config
+Select DHCP. You will see what you had set in the server
+
+8. Repeat with second Desktop
+
+9. To verify the connectivity, we ping PC1 from PC2 and viceversa
+- Select PC2 and open Command Prompt
+- at the prompt type - ping 10.0.0.3 (if all is well, you will get response)
+- Now select PC1 and open Command Prompt
+- at the prompt type - ping 10.0.0.4 (if all is well, you will get response)
