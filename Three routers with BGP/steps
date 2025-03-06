@@ -1,0 +1,57 @@
+                                                          Practical 8 
+Theory: 
+Border Gateway Protocol (BGP) is used to Exchange routing information for the 
+internet and is the protocol used between ISP which are different Autonoumous 
+Systems (AS).  
+The protocol can connect together any internetwork of autonomous system using 
+an arbitrary topology. The only requirement is that each AS have at least one router 
+that is able to run BGP and that is router connect to at least one other AS’s BGP 
+router.  
+BGP’s main function is to exchange network reach-ability information with other 
+BGP systems.  
+Characteristics of Border Gateway Protocol (BGP): 
+a) The main role of BGP is to provide communication between two 
+autonomous systems. 
+b) BGP supports Next-Hop Paradigm. 
+c) Coordination among multiple BGP speakers within the AS (Autonomous 
+System). 
+d) BGP advertisement also include path information, along with the reachable 
+destination and next destination pair. 
+e) BGP can implement policies that can be configured by the administrator.  
+f) BGP runs Over TCP. 
+g) BGP conserve network Bandwidth. 
+h) BGP supports CIDR. 
+i) BGP also supports Security
+
+
+
+Configuring Router 0 for BGP (using the CLI mode) 
+Router>enable 
+Router#configure terminal  
+Router(config)# 
+Router(config)#router bgp 1000 
+Router(config-router)# 
+Router(config-router)#network 10.0.0.0 
+Router(config-router)#network 192.168.1.0 
+Router(config-router)#neighbor 10.0.0.2 remote-as 2000 
+
+Configuring Router 1 for BGP (using the CLI mode) 
+Router>enable  
+Router#configure terminal  
+Router(config)# 
+Router(config)#router bgp 2000 
+Router(config-router)#network 10.0.0.0 
+Router(config-router)#network 20.0.0.0 
+Router(config-router)#network 192.168.2.0 
+Router(config-router)#neighbor 10.0.0.1 remote-as 1000 
+Router(config-router)#neighbor 20.0.0.2 remote-as 3000 
+ 
+Configuring Router 2 for BGP (using the CLI mode) 
+Router>enable  
+Router#configure terminal  
+Router(config)# 
+Router(config)#router bgp 3000 
+Router(config-router)# 
+Router(config-router)#network 20.0.0.0 
+Router(config-router)#network 192.168.3.0 
+Router(config-router)#neighbor 20.0.0.1 remote-as 2000 
