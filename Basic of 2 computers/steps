@@ -1,0 +1,33 @@
+Prac 2
+1. Goto 'End Devices'
+
+2. Select PC and Drag and drop 2 PCs into the canvas
+
+3. Now goto 'Connections'
+
+4. From there select 'Copper Cross-Over'
+
+5. Click on PC1 and select 'Fast Ethernet0'
+
+6. Now click on PC2 again select 'Fast Ethernet0'
+
+7. Now assign IP addresses to the PCs: PC1 - 192.168.1.2
+PC2 - 192.168.1.3
+For this Click on PC1 and in the pop-up click on 'Desktop' - 'IP Configuration'
+In IPv4 enter 192.168.1.2
+Subnet Mask - 255.255.255.0
+Default Gateway - 192.168.1.1
+Close the pop-up
+Now click on PC2 and in the pop-up click on 'Desktop' - 'IP Configuration'
+In IPv4 enter 192.168.1.3
+Subnet Mask - 255.255.255.0
+Default Gateway - 192.168.1.1
+Close the pop-up
+
+8. To check the connectivity we use the 'ping' command
+
+9. Click on PC1 'Command Prompt'. The command prompt of PC1 will appear. Here type the command 'ping 192.168.1.3'
+(to ping PC2) If all is connected well you will get a response from PC2
+
+10. Repeat for PC2: Click on PC2 'Command Prompt'. 
+The command prompt of PC2 will appear. Here type the command 'ping 192.168.1.2' (to ping PC1) If all is connected well you will get a response from PC1
