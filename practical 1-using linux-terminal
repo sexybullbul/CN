@@ -1,0 +1,59 @@
+1. ping
+Explanation:
+ping is a command used to test the reachability of a host (like a server or a computer) on a network and measure the round-trip time data packets take to reach that host and return.
+How to Use:
+ping google.com
+
+2. traceroute 
+Explanation:
+traceroute (Linux) or tracert (Windows) is a command that tracks the path packets take to a specific destination across the network, showing each router or hop along the way.
+How to Use:
+traceroute google.com
+
+3. netstat
+Explanation:
+netstat (Network Statistics) is a command that shows network connections, routing tables, interface statistics, and more. It's commonly used to see the current state of your network interfaces.
+How to Use:
+netstat -an
+
+4. arp
+Explanation:
+arp (Address Resolution Protocol) is used to view or manipulate the ARP table, which maps IP addresses to MAC addresses on the local network.
+How to Use:
+arp -a
+
+5. ipconfig (Windows) / ifconfig (Linux)
+Explanation:
+This command displays all the network interfaces and their configuration, such as IP address, subnet mask, and gateway.
+How to Use:
+ipconfig
+
+6. Getmac (Windows)
+Explanation:
+getmac shows the MAC addresses of the network interfaces on your system.
+How to Use:
+getmac
+
+7. hostname
+Explanation:
+hostname displays the name of your computer or device.
+How to Use: 
+hostname
+
+8. nslookup
+Explanation:
+nslookup is used to query DNS (Domain Name System) and retrieve information about domain names, IP addresses, and more.
+How to Use:
+nslookup google.com
+
+9. pathping (Windows only)
+Explanation:
+pathping combines the functionality of ping and traceroute, showing the path to a destination and also giving packet loss information along the route.
+How to Use:
+pathping google.com
+
+10. systeminfo (Windows only)
+Explanation:
+systeminfo provides detailed information about the computer, including the operating system, build, hardware specs, and more.
+How to Use:
+systeminfo
